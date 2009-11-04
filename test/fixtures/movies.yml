@@ -1,0 +1,9 @@
+one:
+  title: MyString
+  rating: MyString
+  genre: MyString
+
+two:
+  title: MyString
+  rating: MyString
+  genre: MyString

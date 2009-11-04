@@ -1,0 +1,774 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091104024335)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "genre" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091104024335')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("movies")[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:45:24) [GET]
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0x1031ad0c0>) on line #1 of app/views/movies/index.html.erb:
+1: <% title "Movies" %>
+2: 
+3: <table>
+4:   <tr>
+
+    app/views/movies/index.html.erb:1
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:46:36) [GET]
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+
+ActionView::TemplateError (undefined local variable or method `root_url' for #<ActionView::Base:0x1031ae100>) on line #12 of app/views/layouts/application.html.erb:
+9:       <div id='header'>
+10: 
+11:         <div id='logo'>
+12:           <%= link_to image_tag('logo', :border => 0, :alt => "My App"), root_url %>
+13:         </div>
+14:         
+15:         <ul id='navigation'>
+
+    app/views/layouts/application.html.erb:12
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:46:54) [GET]
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-03 19:46:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:47:27) [GET]
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 63ms (View: 6, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-03 19:47:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:52:35) [GET]
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-03 19:52:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:52:36) [GET]
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-03 19:52:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:52:50) [GET]
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:52:57) [GET]
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:53:20) [GET]
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 61ms (View: 58, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:53:21) [GET]
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:53:21) [GET]
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:53:22) [GET]
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/movies]
+  [4;36;1mMovie Create (0.4ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Rating', '2009-11-04 02:58:25', 'Title', '2009-11-04 02:58:25', 'Genres')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', '10 Things I Hate About You', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', '10,000 BC', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', '12 Rounds', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', '1408', '2009-11-04 02:58:25', 'Horror')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', '18 Fingers of Death!', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', '21', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', '27 Dresses', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', '300', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'The 40 Year Old Virgin', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', '48 Angels', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', '50 First Dates', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', '88 Minutes', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'A Lot Like Love', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'A Mighty Wind', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'A Prairie Home Companion', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'A Scanner Darkly', '2009-11-04 02:58:25', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Accepted', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Across the Universe', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:25', 'Across the Pacific', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'The Air I Breathe', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Akeelah and the Bee', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Ali', '2009-11-04 02:58:25', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'All the President''s Men', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Alpha Dog', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Alvin and the Chipmunks', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Amadeus', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Amazing Grace', '2009-11-04 02:58:25', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:25', 'American Meth', '2009-11-04 02:58:25', 'Documentary')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Anchorman: The Legend of Ron Burgundy', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'And When Did You Last See Your Father?', '2009-11-04 02:58:25', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Antwone Fisher', '2009-11-04 02:58:25', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Piccadilly Cowboy', '2009-11-04 02:58:25', 'Romance')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Apocalypto', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:25', 'Archangel', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:25', 'Arctic Tale', '2009-11-04 02:58:25', 'Documentary')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'The Astronaut Farmer', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'August Rush', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Australia', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Awake', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Baby Mama', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Ballet Shoes', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Balls of Fury', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Batman Begins', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Be Kind Rewind', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Becoming Jane', '2009-11-04 02:58:25', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Bedtime Stories', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Bee Movie', '2009-11-04 02:58:25', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Bee Season', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Before the Rains', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The X Files: I Want to Believe', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Bella', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Benchwarmers', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Beowulf', '2009-11-04 02:58:25', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Beverly Hills Chihuahua', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Beyond Borders', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:25', 'Shooting Dogs', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'The Big Lebowski', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Bad Company', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Blades of Glory', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:25', 'Blood Alley', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Blood Diamond', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Bolt', '2009-11-04 02:58:25', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Bon voyage', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Bourne Identity', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Bourne Supremacy', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Bourne Ultimatum', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Boy in the Striped Pyjamas', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'The Brave One', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:25', 'Brian Regan: Standing Up', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Bride Wars', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Bridget Jones: The Edge of Reason', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Bridget Jones''s Diary', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Brigham City', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Bucket List', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Bulletproof Monk', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Bullitt', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Arnolds Park', '2009-11-04 02:58:25', 'Mystery')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:25', 'Cars', '2009-11-04 02:58:25', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Casino Royale', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:25', 'Casshern', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Cats & Dogs', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:25', 'Hollywood Unscripted: A Chaos Theory', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Charlie Bartlett', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Charlie Wilson''s War', '2009-11-04 02:58:25', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Charlie and the Chocolate Factory', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Children of Men', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:25', 'Scrooge', '2009-11-04 02:58:25', 'Fantasy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:25', 'Emmet Otter''s Jug-Band Christmas', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'The Homecoming: A Christmas Story', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:25', 'The Chronicles of Narnia: The Lion, the Witch and the Wardrobe', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:25', 'Pitch Black', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Cinderella Man', '2009-11-04 02:58:25', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Cleaner', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Clockstoppers', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Star Wars: Episode II - Attack of the Clones', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.4ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Cloverfield', '2009-11-04 02:58:25', 'Mystery')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:25', 'College Road Trip', '2009-11-04 02:58:25', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:25', 'Lincoln and Lee at Antietam: The Cost of Freedom', '2009-11-04 02:58:25', 'Documentary')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Conagher', '2009-11-04 02:58:25', 'Romance')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Confessions of a Shopaholic', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Contact', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'The Draughtsman''s Contract', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Corpse Bride', '2009-11-04 02:58:25', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Cover', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Crash', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:25', 'Crossfire Trail', '2009-11-04 02:58:25', 'Western')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Curious Case of Benjamin Button', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Da Vinci Code', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Dan in Real Life', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Day the Earth Stood Still', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Day Zero', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Day the Earth Stood Still', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Death at a Funeral', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:25', 'Deck the Halls', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'The Deer Hunter', '2009-11-04 02:58:25', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Definitely, Maybe', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Delta Farce', '2009-11-04 02:58:25', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'The Departed', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'The Devil Wears Prada', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:25', 'The Dirty Dozen', '2009-11-04 02:58:25', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:25', 'Disaster Movie', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Disturbia', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:25', 'Dodgeball: A True Underdog Story', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:25', 'Donnie Brasco', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:25', 'Shadow of a Doubt', '2009-11-04 02:58:25', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:25', 'Down Periscope', '2009-11-04 02:58:25', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'D-War', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Drillbit Taylor', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Hornblower: The Even Chance', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Dumb & Dumber', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Dust to Glory', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Eagle Eye', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Eldorado', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Ella Enchanted', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Emma Smith: My Story', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Enchanted', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Encounters at the End of the World', '2009-11-04 02:58:26', 'Documentary')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The English Patient', '2009-11-04 02:58:26', 'Romance')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Entrapment', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Equilibrium', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Eragon', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Eternal Sunshine of the Spotless Mind', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Evan Almighty', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Evelyn', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Evening', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Everyone''s Hero', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Eye of the Dolphin', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Rambo', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Not Rated', '2009-11-04 02:58:26', 'Family Guy Presents Stewie Griffin: The Untold Story', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Family Man', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Fantastic Four', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Fargo', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Fly Away Home', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Fiddler on the Roof', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Final Countdown', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Final Destination 2', '2009-11-04 02:58:26', 'Horror')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Final Destination 3', '2009-11-04 02:58:26', 'Horror')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Final Destination', '2009-11-04 02:58:26', 'Horror')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Flawless', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'The Flyboys', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Fool''s Gold: The Story of the Brink''s-Mat Robbery', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Forbidden Kingdom', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Four Brothers', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Fred Claus', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Freedom Writers', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Frequency', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Fugitive', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Gabriel Iglesias: Hot and Fluffy', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Galaxy Quest', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Garage', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Gray''s Anatomy', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Georgia Rule', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Get Smart', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Innocence', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Gladiator', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'The Gnome-Mobile', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Gods Must Be Crazy', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Gods Must Be Crazy', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.5ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Golden Compass', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Gone with the Wind', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Gone with the Wind', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Good Night, and Good Luck.', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Good Shepherd', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Good Will Hunting', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Long Kiss Goodnight', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Goonies', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Grease', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Great Debaters', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:26', 'The Great Escape', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The First Great Train Robbery', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Hancock', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Happening', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Happy Feet', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:26', 'Hatari!', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'He Was a Quiet Man', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:26', 'Heaven Knows, Mr. Allison', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Hellboy II: The Golden Army', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Hellboy', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Henry Poole Is Here', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'A History of Violence', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Hitchhiker''s Guide to the Galaxy', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Holiday', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Hollywoodland', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;36;1mMovie Create (0.4ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Home of the Brave', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Horton Hears a Who!', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Hot Fuzz', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Hot Rod', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Hotel for Dogs', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Hours', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The House Bunny', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:26', 'How to Marry a Millionaire', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Incredible Hulk', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Incredible Hulk', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'I Am Legend', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'I Heart Huckabees', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Ice Age', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Just Like Heaven', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Illusionist', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'In the Name of the King: A Dungeon Siege Tale', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'In & Out', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'In the Land of Women', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Indiana Jones and the Kingdom of the Crystal Skull', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:26', 'The Children''s Hour', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:26', 'Insomnia', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Instinct', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Invincible', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Invisible', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Iron Man', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Italian Job', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Living Daylights', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Casino Royale', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('T', '2009-11-04 02:58:26', 'James Bond 007: From Russia with Love', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Casino Royale', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Seven Worlds Collide: Neil Finn & Friends Live at the St. James', '2009-11-04 02:58:26', 'Music')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'On Her Majesty''s Secret Service', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('T', '2009-11-04 02:58:26', 'Quantum of Solace', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Thunderball', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Tomorrow Never Dies', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Jane Austen Book Club', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Jarhead', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Not Rated', '2009-11-04 02:58:26', 'Jeff Dunham: Spark of Insanity', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Jet Pilot', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'John Q', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Journey to the Center of the Earth', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Jumper', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Juno', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Just Like Heaven', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Just Married', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Kabluey', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Keeping the Faith', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Kenny', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:26', 'Key Largo', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Kicking & Screaming', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'King of California', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Kingdom of Heaven', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('TV-MA', '2009-11-04 02:58:26', 'Kinsey', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Kit Kittredge: An American Girl', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Kite Runner', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Knocked Up', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Kung Fu Panda', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Labyrinth', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Lady and the Tramp', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Ladykillers', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Lakeview Terrace', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Lars and the Real Girl', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Last Chance Harvey', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Last Dragon', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Last Mimzy', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Last Sin Eater', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.7ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Last of the Mohicans', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'The Lazarus Project', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Leatherheads', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Leatherheads', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Leonard Cohen: I''m Your Man', '2009-11-04 02:58:26', 'Documentary')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:26', 'Lethal Weapon 3', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Letters from Iwo Jima', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('TV-PG', '2009-11-04 02:58:26', 'Liar Liar', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'License to Wed', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Lions for Lambs', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Bucket List', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Little Children', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Little Nicky', '2009-11-04 02:58:26', 'Fantasy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Little Rascals', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:26', 'Live Free or Die Hard', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'The Longest Day', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Lord of War', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Love Guru', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Loverboy', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Lucky Number Slevin', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Lucky You', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Mad Money', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Madagascar: Escape 2 Africa', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Madagascar', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Made of Honor', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Mamma Mia!', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Manchurian Candidate', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'La marche de l''empereur', '2009-11-04 02:58:26', 'Documentary')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Margot at the Wedding', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Marley & Me', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Married Life', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Martian Child', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Matilda', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Matrix Reloaded', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Matrix Revolutions', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Matrix', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Max Payne', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Mechanic', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Meet Dave', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Meet the Browns', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Meet the Robinsons', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Million Dollar Baby', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.4ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Millions', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Miss Pettigrew Lives for a Day', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Mission: Impossible II', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Mist', '2009-11-04 02:58:26', 'Horror')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:26', 'Mister Roberts', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Mongol', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Monsters, Inc.', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Mosquito Coast', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Ding Dong Night at the Moulin Rouge', '2009-11-04 02:58:26', 'Documentary')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Moving McAllister', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Mr. Bean''s Holiday', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Mr. Brooks', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:26', 'Mr. Magorium''s Wonder Emporium', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Yat goh hiu yan', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Mummy: Tomb of the Dragon Emperor', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Mummy Returns', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Mummy', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Munich', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Over Her Dead Body', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'My Super Ex-Girlfriend', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Mystery Men', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:26', 'The Naked Jungle', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Nanny Diaries', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Napoleon Dynamite', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'National Treasure: Book of Secrets', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'National Treasure', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Negotiator', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Neil Young: Silver and Gold', '2009-11-04 02:58:26', 'Music')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Next', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Nick and Norah''s Infinite Playlist', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Nights in Rodanthe', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Nim''s Island', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'No Reservations', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'North Country', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('TV-G', '2009-11-04 02:58:26', 'North by Northwest', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Notebook', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Notting Hill', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.3ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Numb', '2009-11-04 02:58:26', 'Sci-Fi')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'The Number 23', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Nutty Professor', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Ocean''s Eleven', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Ocean''s Thirteen', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'October Sky', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Zong heng si hai', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Once', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Other Boleyn Girl', '2009-11-04 02:58:26', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Over Her Dead Body', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'Over the Hedge', '2009-11-04 02:58:26', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Pacifier', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'The Painted Veil', '2009-11-04 02:58:26', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Panic Room', '2009-11-04 02:58:26', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:26', 'Papillon', '2009-11-04 02:58:26', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:26', 'The Parent Trap', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Unrated', '2009-11-04 02:58:26', 'Pathfinder', '2009-11-04 02:58:26', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Paul Blart: Mall Cop', '2009-11-04 02:58:26', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:26', 'Paycheck', '2009-11-04 02:58:26', 'Sci-Fi')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Sacrifice at Pearl Harbor', '2009-11-04 02:58:26', 'Documentary')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:26', 'Pearl Harbor II: Pearlmageddon', '2009-11-04 02:58:26', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Penelope', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'People Will Talk', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Persepolis', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The Pursuit of Happyness', '2009-11-04 02:58:27', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The Phantom of the Opera', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Pink Panther 2', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'The Pink Panther', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Pirates of the Caribbean: Dead Man''s Chest', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Pirates of the Caribbean: Dead Man''s Chest', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'Planet of the Apes', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Pleasantville', '2009-11-04 02:58:27', 'Fantasy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'The Polar Express', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Practical Magic', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Pride & Prejudice', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Pride & Prejudice', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Pride & Prejudice', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Prince & Me II: The Royal Wedding', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Chronicles of Narnia: Prince Caspian', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Prince & Me', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Producers', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Night at the Museum: Battle of the Smithsonian', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The Pursuit of Happyness', '2009-11-04 02:58:27', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'The Quiet Man', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Quigley Down Under', '2009-11-04 02:58:27', 'Western')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'RV', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'Rear Window', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Le violon rouge', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Redbelt', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Reign Over Me', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Remo Williams: The Adventure Begins', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Reno 911!: Miami', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Rescue Dawn', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Reservation Road', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Resident Evil: Extinction', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Resurrecting the Champ', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Return to Me', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'Du shen 2', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'Paheli', '2009-11-04 02:58:27', 'Fantasy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'Rio Bravo', '2009-11-04 02:58:27', 'Western')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Robin Hood: Men in Tights', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'Meet the Robinsons', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Robots', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'RocketMan', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Rocky Balboa', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Run Fatboy Run', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Running with Scissors', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Rush Hour 2', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Rush Hour 3', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Rush Hour', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Sahara', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Sahara', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.4ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'Christopher Saint Booth More at IMDbPro &raquo;</span', '2009-11-04 02:58:27', NULL)[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Saints and Soldiers', '2009-11-04 02:58:27', 'War')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Sarah Landon and the Paranormal Hour', '2009-11-04 02:58:27', 'Family')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Saturday Night Fever', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'The Savages', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Saving Sarah Cain', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Saving Silverman', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Not Rated', '2009-11-04 02:58:27', 'School for Scoundrels', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The School of Rock', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Scream 2', '2009-11-04 02:58:27', 'Horror')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Scream 2', '2009-11-04 02:58:27', 'Horror')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Screwed', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'The Sea Chase', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Pirates of the Caribbean: Dead Man''s Chest', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Seeker: The Dark Is Rising', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Seeker: The Dark Is Rising', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Serendipity', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Seven Pounds', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Seven Pounds', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Shall we dansu?', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Shallow Hal', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'Shane', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Shanghai Knights', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'Shaolin Wheel of Life', '2009-11-04 02:58:27', 'Documentary')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Shark Tale', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'The Shawshank Redemption', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'She''s the Man', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Shoot ''Em Up', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'The Joker', '2009-11-04 02:58:27', NULL)[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Shrek 2', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Shrek the Third', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Shrek', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Sicko', '2009-11-04 02:58:27', 'Documentary')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Sideways', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The Simpsons Movie', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'The Singles 2nd Ward', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Sisterhood of the Traveling Pants', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The Sixth Sense', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Sky Crawlers', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Sky High', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Smart People', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Snakes on a Plane', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'So I Married an Axe Murderer', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'Someone Was Watching', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Something''s Gotta Give', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Soylent Green', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'Space Chimps', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Spartacus', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.3ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Speed Racer', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Spider-Man', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.4ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Spiderwick Chronicles', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'Spirit: Stallion of the Cimarron', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Star Trek: The Motion Picture', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Stardust', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Step Brothers', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Stick It', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Stop-Loss', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Adventures of Bob & Doug McKenzie: Strange Brew', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Strange Wilderness', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Stranger Than Fiction', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The Sum of All Fears', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Superman Returns', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'Jesus Christ Superstar', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'Support Your Local Sheriff!', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Surf''s Up', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Sweeney Todd: The Demon Barber of Fleet Street', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Sweet and Lowdown', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Syriana', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Take the Lead', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Star Wars', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'The Tale of Despereaux', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Tenacious D in The Pick of Destiny', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The Rocker', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'Tasogare Seibei', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Then She Found Me', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'There Will Be Blood', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'The Thin Red Line', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Things We Lost in the Fire', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Thumbsucker', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Titan A.E.', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'To Catch a Thief', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Approved', '2009-11-04 02:58:27', 'To Have and Have Not', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Tommy Boy', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'Toy Story 2', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'Toy Story', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Train Robbers', '2009-11-04 02:58:27', 'Western')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Traitor', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Transformers', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Troy', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Land of the Dead', '2009-11-04 02:58:27', 'Horror')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Two Weeks Notice', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'U.S. Marshals', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Ultimate Gift', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Unaccompanied Minors', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Undercover Brother', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Undertow', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('Not Rated', '2009-11-04 02:58:27', 'Unknown', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Untraceable', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'The Usual Suspects', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'V for Vendetta', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Vacancy 2: The First Cut', '2009-11-04 02:58:27', 'Horror')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Valkyrie', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Vantage Point', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Planet of the Apes', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('G', '2009-11-04 02:58:27', 'WALL-E', '2009-11-04 02:58:27', 'Animation')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Waitress', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Waking Ned', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Walk Hard: The Dewey Cox Story', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.4ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Walk the Line', '2009-11-04 02:58:27', 'Biography')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Wanted', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'Through the Fire', '2009-11-04 02:58:27', 'Horror')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'WarGames', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'War, Inc.', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'The Water Horse', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'We Own the Night', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'The Weather Man', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The Wedding Singer', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'What Dreams May Come', '2009-11-04 02:58:27', 'Drama')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'What Happens in Vegas', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Wo shi shei', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Wild Hogs', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Without a Paddle', '2009-11-04 02:58:27', 'Adventure')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Witless Protection', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('R', '2009-11-04 02:58:27', 'Mujeres al borde de un ataque de nervios', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'The X Files: I Want to Believe', '2009-11-04 02:58:27', 'Crime')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'X2', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'Year of the Donkey', '2009-11-04 02:58:27', 'Horror')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Yes Man', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.4ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'You Don''t Mess with the Zohan', '2009-11-04 02:58:27', 'Action')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'You Move You Die', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES(NULL, '2009-11-04 02:58:27', 'You''re Gonna Miss Me', '2009-11-04 02:58:27', 'Documentary')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Young at Heart', '2009-11-04 02:58:27', 'Documentary')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Young Frankenstein', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG', '2009-11-04 02:58:27', 'Zathura: A Space Adventure', '2009-11-04 02:58:27', 'Action')[0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'Zoolander', '2009-11-04 02:58:27', 'Comedy')[0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("rating", "created_at", "title", "updated_at", "genre") VALUES('PG-13', '2009-11-04 02:58:27', 'xXx', '2009-11-04 02:58:27', 'Action')[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:58:38) [GET]
+  [4;36;1mMovie Load (25.6ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 1975ms (View: 1934, DB: 26) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#destroy (for 127.0.0.1 at 2009-11-03 19:58:49) [DELETE]
+  Parameters: {"authenticity_token"=>"TJZ1fB+emMCvVvrXZ4LkszdVxh7w+aA8MKBNQlI0HRs=", "id"=>"1"}
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+  [4;36;1mMovie Destroy (0.3ms)[0m   [0;1mDELETE FROM "movies" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/movies
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/movies/1]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:58:49) [GET]
+  [4;35;1mMovie Load (27.2ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 1954ms (View: 1911, DB: 27) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2009-11-03 19:59:33) [GET]
+Rendering template within layouts/application
+Rendering movies/new
+Rendered movies/_form (4.0ms)
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/movies/new]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:59:35) [GET]
+  [4;36;1mMovie Load (26.6ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 2023ms (View: 1982, DB: 27) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-11-03 19:59:58) [GET]
+  [4;35;1mMovie Load (26.6ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 2019ms (View: 1978, DB: 27) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-11-03 20:00:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering movies/show
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/movies/2]

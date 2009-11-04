@@ -1,0 +1,20 @@
+<% title "Movie" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @movie.title %>
+</p>
+<p>
+  <strong>Rating:</strong>
+  <%=h @movie.rating %>
+</p>
+<p>
+  <strong>Genre:</strong>
+  <%=h @movie.genre %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_movie_path(@movie) %> |
+  <%= link_to "Destroy", @movie, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", movies_path %>
+</p>
